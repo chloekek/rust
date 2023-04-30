@@ -565,7 +565,8 @@ impl<'tcx> LateLintPass<'tcx> for MissingDoc {
             | hir::ItemKind::Struct(..)
             | hir::ItemKind::Union(..)
             | hir::ItemKind::Const(..)
-            | hir::ItemKind::Static(..) => {}
+            | hir::ItemKind::Static(..)
+            | hir::ItemKind::TraitAlias(..) => {}
 
             _ => return,
         };
